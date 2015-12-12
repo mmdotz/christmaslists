@@ -1,0 +1,17 @@
+Who is a User: A family member
+
+User Model
+has_one :wish_list, dependent => :destroy
+belongs_to :clan, dependent => :destroy
+has_many :purchases
+
+full_name method
+
+fields:
+first
+last
+password_digest
+FK clan_id
+
+considerations:
+current_user should not show in recipient choice list
