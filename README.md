@@ -35,11 +35,11 @@ More information in the Gemfile
 - Run `bundle install`
 - Run `rake db:create`
 -
-- 
+-
 - `rails s` to start server
 
 ##More information
-- original UMLs ![UMLs](/docs/___.png)
+- original UMLs ![UMLs](/docs/UMLchristmaslists.pdf)
 - current [Trello scrum board](https://trello.com/______)
 - wireframes
 	- [login](/docs/login.png)
