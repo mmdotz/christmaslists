@@ -21,3 +21,28 @@ users = User.create([{
   last:       "Moniz",
   password:   "password"
   }])
+
+  recipients = Recipient.create([{
+    first: "Ian",
+    last: "Hall",
+    age: 14,
+    size: 'shoe 9, hat 15, shirt M, pants 25x30"',
+    notes: "likes Legos, Minecraft, science, video games, guitar",
+    user_id: 1,
+  },
+    {
+    first: "Brendan",
+    last: "Hall",
+    age: 9,
+    size: 'shoe 3, hat S, shirt S, pants boys 8',
+    notes: "likes Legos, exploring, drawing, action figures",
+    user_id: 1,
+  },
+    {
+    first: "Chloe",
+    last: "Hall",
+    age: 9,
+    size: 'shoe 2, hat S, shirt M, pants 8',
+    notes: "likes Legos, Minecraft, science, video games, guitar",
+    user_id: 1,
+  }])

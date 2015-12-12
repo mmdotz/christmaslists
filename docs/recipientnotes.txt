@@ -21,4 +21,5 @@ can view recipient (other user)'s wish list
 
 considerations:
 recipient cannot become user
+in a family, there would be shared recipients!!
 seed
