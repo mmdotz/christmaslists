@@ -1,0 +1,12 @@
+What is a relation: an association between a clan and a user
+Join table
+
+Relation Model
+
+
+
+fields:
+FK user_id
+FK clan_id
+
+considerations:
