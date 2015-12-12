@@ -1,0 +1,13 @@
+Who is a Recipient: another User, a non-user
+
+Recipient
+belongs_to :user
+
+fields:
+age   integer
+size  (text field)
+notes (text field for likes/dislikes)
+first
+last
+
+Create a recipient from a user by saving a FK user_id in recipient table
