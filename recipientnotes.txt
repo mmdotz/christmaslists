@@ -9,6 +9,7 @@ size  (text field)
 notes (text field for likes/dislikes)
 first
 last
+FK user_id
 
 methods:
 +1 to age upon calendar change to following Christmas season
@@ -20,3 +21,4 @@ can view recipient (other user)'s wish list
 
 considerations:
 recipient cannot become user
+seed

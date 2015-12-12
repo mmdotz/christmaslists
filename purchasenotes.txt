@@ -10,8 +10,10 @@ vendor
 total cost :integer
 tracking number :string
 bought :boolean
+FK user_id
 
 
 considerations:
 not all fields should be required so cash gifts can be saved
 ideally this would be tied to Wish List
+seed?

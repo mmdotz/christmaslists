@@ -12,7 +12,8 @@ fields:
 first
 last
 password_digest
-FK clan_id
+
 
 considerations:
 any user (not current_user, should not appear in choice list) can become a recipient
+seed

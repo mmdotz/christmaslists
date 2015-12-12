@@ -2,7 +2,7 @@ What is a clan: A group of users by name
 JOIN table?
 
 User Model
-has_many :users, dependent => :destroy
+belongs_to :users, dependent => :destroy
 
 
 fields:
@@ -13,3 +13,4 @@ considerations:
 users will want to see a list of other users by clan clan.users
 user can belong_to more than one clan - read about this relationship
 would we need to see current_user.clans for any reason?
+seed
