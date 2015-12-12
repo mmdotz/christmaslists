@@ -2,7 +2,7 @@ Who is a user: A family member
 
 User Model
 has_one :wish_list, dependent => :destroy
-belongs_to :clan, dependent => :destroy
+has_many :clans, dependent => :destroy
 has_many :purchases
 
 methods:
