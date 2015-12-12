@@ -1,0 +1,11 @@
+What is a wishlist: list of gift ideas by user
+
+Wishlist Model
+belongs_to :user
+
+fields:
+item
+FK user_id
+
+considerations:
+be able to call wishlist.items by user_id
