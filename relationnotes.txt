@@ -1,6 +1,6 @@
-Who is a user: A family member
+What is a relation: an association between a clan and a user
 
-User Model
+Relation Model
 has_one :wish_list, dependent => :destroy
 has_many :purchases
 

@@ -1,13 +1,11 @@
-What is a clan: A group of users by name
-JOIN table?
+What is a clan: A named family
+JOIN table? ==> no need a Relations join
 
-User Model
-belongs_to :users, dependent => :destroy
+Clan Model
 
 
 fields:
 name
-FK user_id
 
 considerations:
 users will want to see a list of other users by clan clan.users
