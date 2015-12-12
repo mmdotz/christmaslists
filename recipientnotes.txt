@@ -4,10 +4,19 @@ Recipient
 belongs_to :user
 
 fields:
-age   integer
+age   :integer
 size  (text field)
 notes (text field for likes/dislikes)
 first
 last
 
+methods:
++1 to age upon calendar change to following Christmas season
+
+actionable:
 Create a recipient from a user by saving a FK user_id in recipient table
+
+
+
+considerations:
+recipient cannot become user

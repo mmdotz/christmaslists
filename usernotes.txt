@@ -1,11 +1,12 @@
-Who is a User: A family member
+Who is a user: A family member
 
 User Model
 has_one :wish_list, dependent => :destroy
 belongs_to :clan, dependent => :destroy
 has_many :purchases
 
-full_name method
+methods:
+full_name
 
 fields:
 first
@@ -14,4 +15,4 @@ password_digest
 FK clan_id
 
 considerations:
-current_user should not show in recipient choice list
+any user (not current_user, should not appear in choice list) can become a recipient

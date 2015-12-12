@@ -1,0 +1,16 @@
+What is a Purchase: any gift, physical or financial
+
+Purchase Model
+belongs_to :user, dependent => :destroy
+
+fields:
+item
+url
+vendor
+total cost :integer
+tracking number :string
+bought :boolean
+
+
+considerations:
+not all fields should be required so cash gifts can be saved
