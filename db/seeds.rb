@@ -46,3 +46,13 @@ users = User.create([{
     notes: "likes Legos, Minecraft, science, video games, guitar",
     user_id: 1,
   }])
+
+  clans = Clan.create([{
+    name: "Hall"
+  },
+  {
+    name: "Moniz"
+  },
+  {
+    name: "Dotzenrod"
+  }])
