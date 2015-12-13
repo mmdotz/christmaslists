@@ -44,7 +44,7 @@ end
 
 
 gem 'faker'
-gem 'bcrypt'
+gem 'figaro'
 group :production do
   gem 'puma'
   gem 'rails_12factor'
