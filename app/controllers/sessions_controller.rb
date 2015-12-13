@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user.present? && @user.authenticate(params[:password])
       set_user_session(@user)
-      redirect_to homes_index_path, notice: "Successful log-in"
+      redirect_to login_path, notice: "Successful log-in"
     else
       flash[:alert] = "Username or password did not match"
       render :new
@@ -16,8 +16,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[logged_in_users_id] = nil
-    redirect_to root, notice: "You have logged out"
+    session[:logged_in_users_id] = nil
+    redirect_to login_path, notice: "You have logged out"
   end
 
   def set_user_session(user)

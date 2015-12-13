@@ -17,7 +17,11 @@
           <li><a href='/clans'>Clans</a></li>
           <li><a href='/stats/index'>Stats</a></li>
           <li><a href='/finances'>Costs</a></li>
+          <% if user_logged_in? %>
           <li><a href='/logout'>Logout</a></li>
+          <% else %>
+          <li><a href='/login'>Login</a></li>
+          <% end %>
         </ul>
       </div>
     </div>
