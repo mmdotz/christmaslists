@@ -11,6 +11,7 @@ fields:
 first
 last
 password_digest
+budget
 
 
 considerations:

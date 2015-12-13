@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'homes/index'
+
   resources :relations
   resources :clans
   resources :wishlists
