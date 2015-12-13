@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @recipient.age %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @recipient.size %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @recipient.notes %>
+</p>
+
+<p>
+  <strong>First:</strong>
+  <%= @recipient.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @recipient.last %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @recipient.user %>
+</p>
+
+<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
+<%= link_to 'Back', recipients_path %>
