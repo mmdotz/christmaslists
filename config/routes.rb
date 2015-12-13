@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :purchases
   resources :recipients
   resources :users
   get 'sessions/new'
