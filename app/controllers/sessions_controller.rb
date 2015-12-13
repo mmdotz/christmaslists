@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_filter :authenticate_user
-  
+
   def new
   end
 
@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user.present? && @user.authenticate(params[:password])
       set_user_session(@user)
-      redirect_to home_path, notice: "Successful log-in"
+      redirect_to homes_index_path, notice: "Successful log-in"
     else
       flash[:alert] = "Username or password did not match"
       render :new

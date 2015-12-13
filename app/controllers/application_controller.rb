@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     unless user_logged_in?
-      redirect_to root
+      redirect_to home_path
     end
   end
 

@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   resources :purchases
   resources :recipients
   resources :users
-  get 'sessions/new'
 
-  get 'sessions/create'
-
-  get 'sessions/destroy'
+  get '/home',     to: 'homes#index',    as: 'home'
+  get '/login',    to: 'sessions#new', as: 'login'
+  post '/login',   to: 'sessions#create'
+  get '/logout',   to: 'sessions#destroy', as: 'logout'
 
   root "sessions#new"
 
