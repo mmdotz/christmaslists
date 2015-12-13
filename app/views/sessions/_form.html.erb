@@ -1,0 +1,20 @@
+
+<div class="login">
+  <section class="shadow">
+
+  <%= form_tag root_path, class: "form-signin" do %>
+    <h3 class="form-signin-heading">Please sign in</h3>
+
+    <label for="inputEmail" class="sr-only"></label>
+    <%= text_field_tag :email, '', class: 'form-control', id: 'inputEmail', placeholder: 'Email Address', required: true %>
+
+    <%= label_tag 'Password', '', class: 'sr-only' %>
+    <%= password_field_tag :password, '', class: 'form-control', id: 'inputPassword', placeholder: 'Password', required: true %>
+
+    <%= submit_tag "Sign In", class: 'btn btn-lg btn-warning btn-block' %>
+  <% end %>
+  <br>
+  <br>
+  </section>
+</div>
+New user? <em><%= link_to('Create an account', new_user_path) %></em>
