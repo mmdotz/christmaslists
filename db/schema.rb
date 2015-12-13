@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151213162614) do
+ActiveRecord::Schema.define(version: 20151213170613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 20151213162614) do
 
   add_index "recipients", ["user_id"], name: "index_recipients_on_user_id", using: :btree
 
+  create_table "relations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "clan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "relations", ["clan_id"], name: "index_relations_on_clan_id", using: :btree
+  add_index "relations", ["user_id"], name: "index_relations_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "first"
     t.string   "last"
@@ -68,5 +78,7 @@ ActiveRecord::Schema.define(version: 20151213162614) do
 
   add_foreign_key "purchases", "users"
   add_foreign_key "recipients", "users"
+  add_foreign_key "relations", "clans"
+  add_foreign_key "relations", "users"
   add_foreign_key "wishlists", "users"
 end
