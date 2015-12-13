@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :relations
   resources :clans
   resources :wishlists
   resources :purchases
