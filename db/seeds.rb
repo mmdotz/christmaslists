@@ -9,17 +9,24 @@
 users = User.create([{
   first:      "Joanne",
   last:       "Hall",
-  password:   "password"
+  email:      "joanne@example.com",
+  password:   "password",
+  budget:     1200
 },
   {
   first:      "Michelle",
   last:       "Dotzenrod",
-  password:   "password"
+  email:      "michelle@example.com",
+  password:   "password",
+  budget:     700
 },
   {
   first:      "Cathy",
   last:       "Moniz",
-  password:   "password"
+  email:      "cat@example.com",
+  password:   "password",
+  budget:     3000
+
   }])
 
   recipients = Recipient.create([{
@@ -43,7 +50,7 @@ users = User.create([{
     last: "Hall",
     age: 9,
     size: 'shoe 2, hat S, shirt M, pants 8',
-    notes: "likes Legos, Minecraft, science, video games, guitar",
+    notes: "likes Legos, earrings, science, keyboard",
     user_id: 1,
   }])
 
