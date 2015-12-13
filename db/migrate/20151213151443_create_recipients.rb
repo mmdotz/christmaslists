@@ -1,7 +1,7 @@
 class CreateRecipients < ActiveRecord::Migration
   def change
     create_table :recipients do |t|
-      t.integer :age
+      t.integer :age, :null => false
       t.text :size
       t.text :notes
       t.string :first
