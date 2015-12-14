@@ -11,13 +11,12 @@
       <th>Cost</th>
       <th>Tracking num</th>
       <th>Bought</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @purchases.each do |purchase| %>
+    <% current_user.purchases.each do |purchase| %>
       <tr>
         <td><%= purchase.item %></td>
         <td><%= purchase.url %></td>
@@ -25,7 +24,6 @@
         <td><%= purchase.cost %></td>
         <td><%= purchase.tracking_num %></td>
         <td><%= purchase.bought %></td>
-        <td><%= purchase.user %></td>
         <td><%= link_to 'Show', purchase %></td>
         <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
         <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>

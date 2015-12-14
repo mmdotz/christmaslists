@@ -14,7 +14,7 @@
   <tbody>
     <% @relations.each do |relation| %>
       <tr>
-        <td><%= relation.user %></td>
+        <td><%= relation.user.full_name %></td>
         <td><%= relation.clan %></td>
         <td><%= link_to 'Show', relation %></td>
         <td><%= link_to 'Edit', edit_relation_path(relation) %></td>
