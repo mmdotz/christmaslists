@@ -10,8 +10,16 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.label :first %><br>
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :last %><br>
+    <%= f.text_field :last %>
+  </div>
+  <div class="field">  <!-- age shouldn't be negative! -->
     <%= f.label :age %><br>
     <%= f.number_field :age %>
   </div>
@@ -22,18 +30,6 @@
   <div class="field">
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
-  </div>
-  <div class="field">
-    <%= f.label :first %><br>
-    <%= f.text_field :first %>
-  </div>
-  <div class="field">
-    <%= f.label :last %><br>
-    <%= f.text_field :last %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

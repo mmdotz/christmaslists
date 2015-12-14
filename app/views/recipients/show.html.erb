@@ -27,7 +27,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @recipient.user %>
+  <%= @recipient.user.first %>
 </p>
 
 <%= link_to 'Edit', edit_recipient_path(@recipient) %> |

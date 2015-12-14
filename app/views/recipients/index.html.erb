@@ -16,13 +16,13 @@
   </thead>
 
   <tbody>
-    <% @recipients.each do |recipient| %>
+    <% current_user.recipients.each do |recipient| %>
       <tr>
+        <td><%= recipient.first %></td>
+        <td><%= recipient.last %></td>
         <td><%= recipient.age %></td>
         <td><%= recipient.size %></td>
         <td><%= recipient.notes %></td>
-        <td><%= recipient.first %></td>
-        <td><%= recipient.last %></td>
         <td><%= link_to 'Show', recipient %></td>
         <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
         <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
