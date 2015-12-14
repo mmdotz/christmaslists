@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     unless user_logged_in?
-      redirect_to home_path
+      redirect_to login_path
     end
   end
 
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_logged_in?
-    session["logged_in_users_id"].present?
+    session[:logged_in_users_id].present?
   end
 
   helper_method :user_logged_in?

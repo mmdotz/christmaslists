@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'homes/index'
 
   resources :relations
   resources :clans
@@ -10,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/home',     to: 'homes#index',    as: 'home'
   get '/login',    to: 'sessions#new', as: 'login'
-  post '/login',   to: 'sessions#create'
+  post '/login',   to: 'sessions#create', as: 'create_session'
   get '/logout',   to: 'sessions#destroy', as: 'logout'
 
   root "sessions#new"
