@@ -11,13 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="field">
     <%= f.label :clan_id %><br>
-    <%= f.text_field :clan_id %>
+    <%= f.text_field :clan_id %>  <!--use a drop down here  -->
   </div>
   <div class="actions">
     <%= f.submit %>
