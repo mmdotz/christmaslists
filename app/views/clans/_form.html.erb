@@ -13,7 +13,11 @@
 
   <div class="field">
     <%= f.label :name %><br>
+    <% if @clan.new_record? %>
+    <%= f.text_field :name %>
+    <% else %>
     <%= f.collection_select :name, Clan.order(:name),:id,:name, include_blank: true %>  </div>
+    <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
