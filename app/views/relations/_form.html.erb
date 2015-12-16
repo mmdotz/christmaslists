@@ -14,7 +14,7 @@
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="field">
     <%= f.label :clan_id %><br>
-    <%= f.text_field :clan_id %>  <!--use a drop down here  -->
+    <!-- <%# f.collection_select :relation_id, Relation.order(:name),:id,:name, include_blank: true %> -->
   </div>
   <div class="actions">
     <%= f.submit %>
