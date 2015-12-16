@@ -42,7 +42,7 @@ class PurchasesController < ApplicationController
   def update
     respond_to do |format|
       if @purchase.update(purchase_params)
-        format.html { redirect_to @purchases, notice: 'Purchase was successfully updated.' }
+        format.html { redirect_to purchases_url, notice: 'Purchase was successfully updated.' }
         format.json { render :show, status: :ok, location: @purchase }
       else
         format.html { render :edit }
