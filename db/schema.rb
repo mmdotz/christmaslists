@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151213231212) do
+ActiveRecord::Schema.define(version: 20151216221312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,15 +28,16 @@ ActiveRecord::Schema.define(version: 20151213231212) do
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.string   "item",                         null: false
+    t.string   "item",                          null: false
     t.string   "url"
     t.string   "vendor"
-    t.integer  "cost",         default: 0
+    t.integer  "cost",          default: 0
     t.string   "tracking_num"
-    t.boolean  "bought",       default: false
+    t.boolean  "bought",        default: false
     t.integer  "user_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.datetime "purchase_date"
   end
 
   add_index "purchases", ["user_id"], name: "index_purchases_on_user_id", using: :btree
