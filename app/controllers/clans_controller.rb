@@ -5,7 +5,10 @@ class ClansController < ApplicationController
   # GET /clans.json
   def index
     @clans = Clan.all
+    @clan_relations = Clan.all.map(&:relations).map # => Enumerator -to do: map and return user_id
+
   end
+
 
   # GET /clans/1
   # GET /clans/1.json
