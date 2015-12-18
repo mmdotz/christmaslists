@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates :last, presence: true
 
   def full_name
-    "#{self.first} + ' ' + #{self.last}"
+    "#{self.first} #{self.last}"
   end
 
 end
