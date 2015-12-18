@@ -20,7 +20,17 @@ class ApplicationController < ActionController::Base
     session[:logged_in_users_id].present?
   end
 
+  def total_purchases(user)
+    user.purchases.all.count
+  end
+
+  def total_paid(user)
+    user.purchases.all.map { |purchase| purchase.cost}.sum
+  end
+
+
   helper_method :user_logged_in?
   helper_method :current_user
-
+  helper_method :total_paid
+  helper_method :total_purchases
 end

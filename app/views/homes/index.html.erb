@@ -1,7 +1,10 @@
 <h1>Welcome to your home page, <%= current_user.first %></h1>
 
 
-<%= current_user.budget %>
+<h3>Your budget is: $<%= current_user.budget %><br>
+You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gifts. </h3>
+
+Purchases this season:
 
 
 <!--list Clans -->
