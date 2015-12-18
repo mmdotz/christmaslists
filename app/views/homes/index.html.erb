@@ -1,12 +1,14 @@
-<h1>Welcome to your home page, <%= current_user.first %></h1>
+<h1>Welcome to the <%= Time.now %> <%= current_user.clan_name %> Christmas Season, <%= current_user.first %></h1>
 
 
-<h3>Your budget is: $<%= current_user.budget %><br>
-You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gifts. </h3>
+<h4>Your budget is: $<%= current_user.budget %><br>
+You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gifts.
 
 Purchases this season:
 
 
+
+</h3>
 <!--list Clans -->
 
 <!-- stats here? -->

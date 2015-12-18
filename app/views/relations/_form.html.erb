@@ -13,8 +13,8 @@
 
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="field">
-    <%= f.label :clan_id %><br>
-    <!-- <%# f.collection_select :relation_id, Relation.order(:name),:id,:name, include_blank: true %> -->
+    <%= f.label :clan_name %><br>
+    <%= f.collection_select :clan_id, Clan.order(:name),:id,:name, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
