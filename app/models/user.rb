@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_one   :wishlist, dependent: :destroy
   has_many  :recipients
   has_many  :purchases
+  has_many  :relations
   validates :password, length: { minimum: 5 }
   validates :first, presence: true
   validates :last, presence: true
