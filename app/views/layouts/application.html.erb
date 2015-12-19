@@ -7,26 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <ul>
-          <li><a href='/home'>Home</a></li>
-          <li><a href='/purchases'>Purchases</a></li>
-          <li><a href='/recipients'>Recipients</a></li>
-          <li><a href='/relations'>Relations</a></li> <!--for dev purpose sonly -->
-          <li><a href='/clans'>Clans</a></li>
-          <li><a href='/costs'>Costs</a></li>
-          <% if user_logged_in? %>
-          <li><a href='/logout'>Logout</a></li>
-          <% else %>
-          <li><a href='/login'>Login</a></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <ul class="nav nav-tabs">
+    <li><a href='/home'>Home</a></li>
+    <li><a href='/purchases'>Purchases</a></li>
+    <li><a href='/recipients'>Recipients</a></li>
+    <li><a href='/relations'>Relations</a></li> <!--for dev purpose sonly -->
+    <li><a href='/clans'>Clans</a></li>
+    <li><a href='/costs'>Costs</a></li>
+    <% if user_logged_in? %>
+    <li><a href='/logout'>Logout</a></li>
+    <% else %>
+    <li><a href='/login'>Login</a></li>
+    <% end %>
+  </ul>
 <%= yield %>
 <br>
 <% if user_logged_in? %>
