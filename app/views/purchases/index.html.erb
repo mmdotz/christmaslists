@@ -2,35 +2,36 @@
 
 <h1>Purchases</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Url</th>
-      <th>Vendor</th>
-      <th>Cost</th>
-      <th>Tracking num</th>
-      <th>Bought?</th>
-      <th>Date of Purchase</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% current_user.purchases.each do |purchase| %>
+<table class="table-responsive">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= purchase.item %></td>
-        <td><%= purchase.url %></td>
-        <td><%= purchase.vendor %></td>
-        <td><%= purchase.cost %></td>
-        <td><%= purchase.tracking_num %></td>
-        <td><%= purchase.bought %></td>
-        <td><%= purchase.purchase_date.strftime("%B %d, %Y") %></td>
-        <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Item</th>
+        <th>Url</th>
+        <th>Vendor</th>
+        <th>Cost</th>
+        <th>Tracking num</th>
+        <th>Bought?</th>
+        <th>Date of Purchase</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
+    <tbody>
+      <% current_user.purchases.each do |purchase| %>
+        <tr>
+          <td><%= purchase.item %></td>
+          <td><%= purchase.url %></td>
+          <td><%= purchase.vendor %></td>
+          <td><%= purchase.cost %></td>
+          <td><%= purchase.tracking_num %></td>
+          <td><%= purchase.bought %></td>
+          <td><%= purchase.purchase_date.strftime("%B %d, %Y") %></td>
+          <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
+          <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </table>
 
 <br>

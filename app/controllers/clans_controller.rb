@@ -5,7 +5,13 @@ class ClansController < ApplicationController
   # GET /clans.json
   def index
     @clans = Clan.all
-    @clan_relations = Clan.all.map(&:relations).map # => Enumerator -to do: map and return user_id
+
+    ##trying to getall relations under each clan name, in console this works: how to iterate?
+    clan = Clan.last
+    c = clan.relations
+    c.first.user_id
+
+
 
   end
 

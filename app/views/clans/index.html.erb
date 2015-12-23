@@ -1,27 +1,29 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Clans and Relations (Families and their User Members)</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User/Relation</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clans.each do |clan| %>
+<table class="table-responsive">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= clan.name %></td>
-        <td><%= @clan_relations %></td>
-        <td><%= link_to 'Show', clan %></td>
-        <td><%= link_to 'Edit', edit_clan_path(clan) %></td>
-        <td><%= link_to 'Destroy', clan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>User/Relation</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
+
+    <tbody>
+      <% @clans.each do |clan| %>
+        <tr>
+          <td><%= clan.name %></td>
+          <td><%=  %></td> <!--each relation under clan -->
+
+          <td><%= link_to 'Show', clan %></td>
+          <td><%= link_to 'Edit', edit_clan_path(clan) %></td>
+          <td><%= link_to 'Destroy', clan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </table>
 
 <br>
