@@ -15,8 +15,8 @@
       <% @clans.each do |clan| %>
         <tr>
           <td><%= clan.name %></td>
-          <%= clan.relations.each do |relation| %> <!--each relation under clan -->
-          <li><%= relation.user.first %></li>
+          <% clan.relations.each do |relation| %> <!--each relation under clan -->
+          <td><li><%= relation.user.first %></li></td>
           <% end %>
           <td><%= link_to 'Show', clan %></td>
           <td><%= link_to 'Edit', edit_clan_path(clan) %></td>
