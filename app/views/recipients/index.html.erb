@@ -2,33 +2,34 @@
 
 <h1>Recipients</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Age</th>
-      <th>Size</th>
-      <th>Notes</th>
-      <th>First</th>
-      <th>Last</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% current_user.recipients.each do |recipient| %>
+<table class="table-responsive">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= recipient.first %></td>
-        <td><%= recipient.last %></td>
-        <td><%= recipient.age %></td>
-        <td><%= recipient.size %></td>
-        <td><%= recipient.notes %></td>
-        <td><%= link_to 'Show', recipient %></td>
-        <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
-        <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>First</th>
+        <th>Last</th>
+        <th>Age</th>
+        <th>Size</th>
+        <th>Notes</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
+
+    <tbody>
+      <% current_user.recipients.each do |recipient| %>
+        <tr>
+          <td><%= recipient.first %></td>
+          <td><%= recipient.last %></td>
+          <td><%= recipient.age %></td>
+          <td><%= recipient.size %></td>
+          <td><%= recipient.notes %></td>
+          <td><%= link_to 'Show', recipient %></td>
+          <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
+          <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </table>
 
 <br>
