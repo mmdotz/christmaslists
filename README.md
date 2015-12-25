@@ -39,7 +39,7 @@ More information in the Gemfile
 - `rails s` to start server
 
 ##More information
-- original UMLs ![UMLs](/docs/UMLchristmaslists.pdf)
+- original UMLs [UMLs](/docs/UMLchristmaslists.pdf)
 - current [Trello scrum board](https://trello.com/______)
 - wireframes
 	- [login](/docs/login.png)
