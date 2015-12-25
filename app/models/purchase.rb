@@ -7,4 +7,8 @@ class Purchase < ActiveRecord::Base
       user.purchases
   end
 
+  def recipient
+    
+  end
+
 end

@@ -16,7 +16,7 @@
     </thead>
 
     <tbody>
-      <% current_user.recipients.each do |recipient| %>
+      <% @recipients.each do |recipient| %>
         <tr>
           <td><%= recipient.first %></td>
           <td><%= recipient.last %></td>
