@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :recipient %><br>
-    <%= f.collection_select :recipient, Recipient.all, :id, :first, include_blank: true %>
+    <%= f.collection_select :recipient, @recipients, :id, :first, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :url %><br>
