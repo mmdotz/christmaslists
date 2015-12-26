@@ -3,8 +3,9 @@ class Recipient < ActiveRecord::Base
   belongs_to :purchase
 
 
-  def increment_age_each_year
 
+  def full_name
+    "#{self.first} #{self.last}"
   end
 
 end

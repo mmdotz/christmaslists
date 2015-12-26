@@ -15,16 +15,19 @@ class PurchasesController < ApplicationController
   # GET /purchases/new
   def new
     @purchase = Purchase.new
+    @recipients = current_user.recipients
   end
 
   # GET /purchases/1/edit
   def edit
+    @recipients = current_user.recipients
   end
 
   # POST /purchases
   # POST /purchases.json
   def create
     @purchase = Purchase.new(purchase_params)
+    @recipients = current_user.recipients
 
     respond_to do |format|
       if @purchase.save
@@ -69,6 +72,6 @@ class PurchasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchase_params
-      params.require(:purchase).permit(:item, :url, :vendor, :cost, :tracking_num, :bought, :user_id, :purchase_date, :recipient)
+      params.require(:purchase).permit(:item, :url, :vendor, :cost, :tracking_num, :bought, :user_id, :purchase_date, :recipient_id)
     end
 end
