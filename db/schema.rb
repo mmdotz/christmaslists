@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216224451) do
+ActiveRecord::Schema.define(version: 20151226231355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,8 +38,10 @@ ActiveRecord::Schema.define(version: 20151216224451) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.datetime "purchase_date"
+    t.integer  "recipient_id"
   end
 
+  add_index "purchases", ["recipient_id"], name: "index_purchases_on_recipient_id", using: :btree
   add_index "purchases", ["user_id"], name: "index_purchases_on_user_id", using: :btree
 
   create_table "recipients", force: :cascade do |t|
@@ -84,6 +86,7 @@ ActiveRecord::Schema.define(version: 20151216224451) do
 
   add_index "wishlists", ["user_id"], name: "index_wishlists_on_user_id", using: :btree
 
+  add_foreign_key "purchases", "recipients"
   add_foreign_key "purchases", "users"
   add_foreign_key "recipients", "users"
   add_foreign_key "relations", "clans"
