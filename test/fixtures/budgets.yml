@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 2015-12-27
+  amount: 1
+  user: MyString
+  belongs_to: MyString
+
+two:
+  year: 2015-12-27
+  amount: 1
+  user: MyString
+  belongs_to: MyString
