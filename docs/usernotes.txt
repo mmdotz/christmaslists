@@ -11,7 +11,7 @@ fields:
 first
 last
 password_digest
-budget
+budget -- does user have many budgets over multiple years? Table budget would have amount and year
 
 
 considerations:

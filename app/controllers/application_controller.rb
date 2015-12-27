@@ -28,9 +28,9 @@ class ApplicationController < ActionController::Base
     user.purchases.all.map { |purchase| purchase.cost}.sum
   end
 
-
   helper_method :user_logged_in?
   helper_method :current_user
   helper_method :total_paid
   helper_method :total_purchases
+
 end
