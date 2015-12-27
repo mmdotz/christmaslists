@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :recipients
   resources :users
 
+  get '/costs',    to: 'purchases#index', as: 'finances'
   get '/home',     to: 'homes#index',    as: 'home'
   get '/login',    to: 'sessions#new', as: 'login'
   post '/login',   to: 'sessions#create', as: 'create_session'

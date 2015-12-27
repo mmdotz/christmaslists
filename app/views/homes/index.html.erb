@@ -1,13 +1,13 @@
-<h1>Welcome to the <%= Time.now.year %> Christmas Season, <%= current_user.first %></h1>
+<h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
 
+<h3>Please select a year to view <%= select_year(Date.today, start_year: 2015, end_year: 2020) %></h3>
 
-<h4>Your budget is: $<%= current_user.budget %><br>
+<h4>Your budget is: $<%= current_user.budget %><br><!--needs to be current_year -->
+  
 You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gift(s).
 <br>
 See <%= link_to 'Purchases', purchases_path  %> this season.
 <!--show purchases ordered by date - how to limit to season? -->
-
-
 
 See <%= link_to 'Clans', clans_path %> you belong to
 
