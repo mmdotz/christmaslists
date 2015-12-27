@@ -34,8 +34,6 @@ More information in the Gemfile
 - Clone this Repo
 - Run `bundle install`
 - Run `rake db:create`
--
--
 - `rails s` to start server
 
 ##More information

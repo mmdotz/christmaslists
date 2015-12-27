@@ -6,11 +6,6 @@ class ClansController < ApplicationController
   def index
     @clans = Clan.all
     @relations = Relation.all
-
-    ##trying to getall relations under each clan name, in console this works: how to iterate?
-    clan = Clan.last
-    c = clan.relations
-    c.first.user_id
   end
 
 
