@@ -1,0 +1,8 @@
+What is Home: landing page
+
+Contains information on current_year # of purchases, budget, money spent
+
+considerations:
+realizing that users have many budgets
+budget needs year(season) and amount
+disable future years beyond current_year + 1
