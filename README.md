@@ -1,11 +1,11 @@
-#Family Christmas List - get a less lame name here
-
-#CodeClimate link goes above
-Welcome to Family Christmas List app, the everything present application to keep track of gifting at the Holidays.
+#Family Christmas Lists
+###CodeClimate link goes above
+Welcome to Family Christmas Lists app, the everything present application to
+keep track of gifting at the Holidays.
 
 - A website for families who need to track purchases: vendors, expenses,
-shipping information, item description, and to view statistics
-- Users (Givers) can create a new account to access the app, enter
+shipping information, item descriptions, recipients, and to view statistics
+- Users can create a new account to access the app, enter
 Receiver information: shipping address, age, likes and dislikes, sizes
 - Allow other users read-only access to your lists
 - Check out the live site at [FamilyChristmasList](https://_____.herokuapp.com).
@@ -22,10 +22,10 @@ Please use `some email here` and `password` to use the demo data.
 - Web hosting by Heroku
 - Postgresql Database
 - Sass
-- React for dynamic recipient search
+- React for dynamic recipient search - todo
 - Bcrypt for password encryption
-- CSV for exporting data
-- Chartkick for graphing
+- CSV for exporting data - todo
+- Chartkick for graphing - todo
 
 More information in the Gemfile
 
@@ -39,9 +39,8 @@ More information in the Gemfile
 - `rails s` to start server
 
 ##More information
-- original [UMLs](/docs/UMLchristmaslists.pdf)
-- current [Trello scrum board](https://trello.com/______)
-- wireframes
+- original [UMLs](/docs/UMLchristmaslists.pdf) - done
+- wireframes - todo
 	- [login](/docs/login.png)
 	- [stats](/docs/stats.png)
    - [items by recipient](/docs/items_by_recipient.png)
