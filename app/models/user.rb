@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many  :recipients
   has_many  :purchases
   has_many  :relations
+  has_many  :budgets
   validates :password, length: { minimum: 5 }
   validates :first, presence: true
   validates :last, presence: true

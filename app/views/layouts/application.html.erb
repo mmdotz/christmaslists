@@ -11,7 +11,8 @@
     <li><a href='/home'>Home</a></li>
     <li><a href='/purchases'>Purchases</a></li>
     <li><a href='/recipients'>Recipients</a></li>
-    <li><a href='/relations'>Relations</a></li> <!--for dev purpose sonly -->
+    <li><a href='/relations'>Relations</a></li> <!--for dev purposes only -->
+    <li><a href='/budgets'>Season Budgets</a></li>
     <li><a href='/clans'>Clans</a></li>
     <li><a href='/costs'>Costs</a></li>
     <% if user_logged_in? %>
@@ -26,7 +27,6 @@
 <%= yield %>
 <br>
 <br>
-To view demo data, back type "/users" in URL to view options for log in<br>
 <% if user_logged_in? %>
 <%= current_user.first %> is logged in
 <% end %>

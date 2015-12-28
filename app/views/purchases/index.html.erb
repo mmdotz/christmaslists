@@ -27,7 +27,7 @@
           <td><%= purchase.tracking_num %></td>
           <td><%= purchase.bought %></td>
           <td><%= purchase.purchase_date.strftime("%B %d") %></td>
-          <td><%= purchase.purchase_date.strftime("%Y") %></td>
+          <td><%=  %>"budget.year"</td>
           <td><%= purchase.recipient_id %></td>
           <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
           <td><%= link_to 'Delete', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
