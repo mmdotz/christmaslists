@@ -8,7 +8,7 @@ shipping information, item descriptions, recipients, and to view statistics
 - Users can create a new account to access the app, enter
 Receiver information: shipping address, age, likes and dislikes, sizes
 - Allow other users read-only access to your lists
-- Check out the live site at [FamilyChristmasList](https://_____.herokuapp.com).
+- Check out the live site at [FamilyChristmasList](https://familychristmaslist.herokuapp.com/).
 Please use `some email here` and `password` to use the demo data.
 - Please see the github repo [wiki](https://github.com/mmdotz/christmaslists/wiki) for this site for anticipated changes
 

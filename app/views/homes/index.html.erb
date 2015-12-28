@@ -1,6 +1,6 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
 <h3>Please select a year to view
-  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %> 
+  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %>
 <h4>
   Your <em><%= "^year selected from dropdown" %></em> budget is: $<%= current_user.budget %>
   <br>
@@ -15,4 +15,6 @@
 
 <br>
 <!-- stats here? -->
-chartkick purchases by recipient
+chartkick purchases by recipient <br>
+
+link_to view your wishlist

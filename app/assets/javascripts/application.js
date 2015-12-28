@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+// not working
 $(document).ready(function() {
   $('#set_year').change(function() {
     current_year = $(this).val();

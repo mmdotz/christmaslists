@@ -17,3 +17,4 @@ considerations:
 not all fields should be required so cash gifts can be saved
 ideally this would be tied to Wish List
 want to see recipient.purchases
+?? do purchases belong_to a season?
