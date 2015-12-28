@@ -1,8 +1,6 @@
 class HomesController < ApplicationController
   def index
-  end
-
-  def current_year
+    @current_year = current_user.purchases.first.purchase_date.strftime("%Y")
   end
 
 end

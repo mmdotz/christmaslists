@@ -1,9 +1,11 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
-<h3>Please select a year to view
-  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %>
+<h3>Please select a season to view
+  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %><!--need to change this to options for select year array -->
 <h4>
-  Your <em><%= "^year selected from dropdown" %></em> budget is: $<%= current_user.budget %>
-  To begin a new season of purchases, go to new purchase path
+
+  Current budget (<em><%= @current_year %></em>)  is: $<%= current_user.budget %>
+  <br>
+  To begin a new season, go to <%= link_to 'Add first purchase of the season', new_purchase_path %>
   <br>
   <!-- need to set the current_year then see only those purchases with purchase_date -->
   You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gift(s) this season.
@@ -16,6 +18,7 @@
 
 <br>
 <!-- stats here? -->
+to-do<br>
 chartkick purchases by recipient <br>
 
 link_to view your wishlist

@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-// not working
+// not working - this needs to start from options for select year array from purchase_dates in Purchase
 $(document).ready(function() {
   $('#set_year').change(function() {
     current_year = $(this).val();
