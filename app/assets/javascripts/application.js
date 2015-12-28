@@ -15,3 +15,12 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $('#set_year').change(function() {
+    current_year = $(this).val();
+    $.ajax({
+      url: "/home?current_year=" + current_year
+    });
+  });
+});
