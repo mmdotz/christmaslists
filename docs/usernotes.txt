@@ -3,6 +3,7 @@ Who is a user: A family member
 User Model
 has_one :wish_list, dependent => :destroy
 has_many :purchases
+has_many :budgets
 
 methods:
 full_name
@@ -16,4 +17,4 @@ budget -- does user have many budgets over multiple years? Table budget would ha
 
 considerations:
 any user (not current_user, should not appear in choice list) can become a recipient
-seed
+creating a user account requires accepting nested attributes for budget
