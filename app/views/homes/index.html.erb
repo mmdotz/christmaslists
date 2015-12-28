@@ -3,6 +3,7 @@
   <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %>
 <h4>
   Your <em><%= "^year selected from dropdown" %></em> budget is: $<%= current_user.budget %>
+  To begin a new season of purchases, go to new purchase path
   <br>
   <!-- need to set the current_year then see only those purchases with purchase_date -->
   You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gift(s) this season.

@@ -12,6 +12,7 @@
         <th>Tracking num</th>
         <th>Bought?</th>
         <th>Date of Purchase</th>
+        <th>Season</td>
         <th>Recipient</td>
         <th colspan="3"></th>
       </tr>
@@ -25,7 +26,8 @@
           <td><%= purchase.cost %></td>
           <td><%= purchase.tracking_num %></td>
           <td><%= purchase.bought %></td>
-          <td><%= purchase.purchase_date.strftime("%B %d, %Y") %></td>
+          <td><%= purchase.purchase_date.strftime("%B %d") %></td>
+          <td><%= purchase.purchase_date.strftime("%Y") %></td>
           <td><%= purchase.recipient_id %></td>
           <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
           <td><%= link_to 'Delete', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
