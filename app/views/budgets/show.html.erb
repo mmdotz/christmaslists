@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Year:</strong>
@@ -10,15 +9,6 @@
   <%= @budget.amount %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @budget.user %>
-</p>
-
-<p>
-  <strong>Belongs to:</strong>
-  <%= @budget.belongs_to %>
-</p>
 
 <%= link_to 'Edit', edit_budget_path(@budget) %> |
 <%= link_to 'Back', budgets_path %>
