@@ -9,7 +9,7 @@ shipping information, item descriptions, recipients, and to view statistics
 Receiver information: shipping address, age, likes and dislikes, sizes
 - Allow other users read-only access to your lists
 - Check out the live site at [FamilyChristmasList](https://familychristmaslist.herokuapp.com/).
-Please use `some email here` and `password` to use the demo data.
+Backtype "/users" into URL to see list of users for demo data.
 - Please see the github repo [wiki](https://github.com/mmdotz/christmaslists/wiki) for this site for anticipated changes
 
 <!-- photo of front page
