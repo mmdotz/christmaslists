@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
   end
 
   def total_purchases(user)
-    user.purchases.all.count
+    paid_purchase = user.purchases.where(bought: true)
+    paid_purchase.count
   end
 
   def total_paid(user)

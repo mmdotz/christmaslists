@@ -1,26 +1,28 @@
 
 <h1>Budgets</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Year/Season</th>
-      <th>Amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @budgets.each do |budget| %>
+<table class="table-responsive">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= budget.year %></td>
-        <td><%= budget.amount %></td>
-        <td><%= link_to 'Show', budget %></td>
-        <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
-        <td><%= link_to 'Destroy', budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Year/Season</th>
+        <th>Amount</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
+
+    <tbody>
+      <% @budgets.each do |budget| %>
+        <tr>
+          <td><%= budget.year %></td>
+          <td><%= budget.amount %></td>
+          <td><%= link_to 'Show', budget %></td>
+          <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
+          <td><%= link_to 'Destroy', budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </table>
 
 <br>
