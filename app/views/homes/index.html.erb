@@ -3,14 +3,23 @@
   <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %> (not valid)<!--need to change this to options for select year array -->
 <h4>
 
-  Current budget (<em><%= @current_year %></em>)  is: $ <%= current_user.budgets.last.amount %>
+  Current budget (<em><%= @current_year %></em>)  is: $ <%= current_user.budgets.last.amount %>  (how to assign current_year/season?)
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
   <br>
   <br>
   <!-- need to set the current_year then see only those purchases with purchase_date -->
-  You have spent $<%= total_paid(current_user) %> on <%= total_purchases(current_user) %> gift(s) this season. 
+  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %> gift(s) this season.
+  <br>
+  You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:
+  <ul>
+    <% current_user.purchases.where(bought: false).each do |unbought_gift| %>
+    <br>
+    <li><%= unbought_gift.item %> for <%= unbought_gift.recipient_id %></li> (change this to full_name)
+    <% end %>
+  </ul>
+  <br>
   <br>
   <!--show purchases limited to current_year -->
   See <%= link_to 'Purchases', purchases_path  %> this (current_year) season.

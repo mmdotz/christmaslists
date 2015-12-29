@@ -20,17 +20,22 @@ class ApplicationController < ActionController::Base
     session[:logged_in_users_id].present?
   end
 
-  def total_purchases(user)
+  def total_number_paid(user)
     user.purchases.where(bought: true).count
   end
 
-  def total_paid(user)
+  def total_number_unpaid(user)
+    user.purchases.where(bought: false).count
+  end
+
+  def total_amt_paid(user)
     user.purchases.where(bought: true).map { |purchase| purchase.cost}.sum
   end
 
   helper_method :user_logged_in?
   helper_method :current_user
-  helper_method :total_paid
-  helper_method :total_purchases
+  helper_method :total_number_paid
+  helper_method :total_number_unpaid
+  helper_method :total_amt_paid
 
 end
