@@ -1,16 +1,16 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
 <h3>Please select a season to view
-  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %> (not valid)<!--need to change this to options for select year array -->
-<h4>
+  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %> (options for select from season/year array)
 
-  Current budget (<em><%= @current_year %></em>)  is: $ <%= current_user.budgets.last.amount %>  (how to assign current_year/season?)
+  Current budget (<em><%= @current_year %></em>)  is: $ <%= current_user.budgets.last.amount %>  (correct this)
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
   <br>
   <br>
   <!-- need to set the current_year then see only those purchases with purchase_date -->
-  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %> gift(s) this season.
+  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
+  gift(s) this season. (showing all current_user purchases - filter by season/year)
   <br>
   You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:
   <ul>
@@ -22,7 +22,8 @@
   <br>
   <br>
   <!--show purchases limited to current_year -->
-  See <%= link_to 'Purchases', purchases_path  %> this (current_year) season.
+  See <%= link_to 'Purchases', purchases_path  %> this season. (filter by season/year)
+  <br>
   See <%= link_to 'Clans', clans_path %> you belong to.
 </h4>
 
