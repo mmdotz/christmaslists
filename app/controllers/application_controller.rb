@@ -21,12 +21,11 @@ class ApplicationController < ActionController::Base
   end
 
   def total_purchases(user)
-    paid_purchase = user.purchases.where(bought: true)
-    paid_purchase.count
+    user.purchases.where(bought: true).count
   end
 
   def total_paid(user)
-    user.purchases.all.map { |purchase| purchase.cost}.sum
+    user.purchases.where(bought: true).map { |purchase| purchase.cost}.sum
   end
 
   helper_method :user_logged_in?
