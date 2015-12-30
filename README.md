@@ -1,5 +1,6 @@
 #Family Christmas Lists
-###CodeClimate link goes above
+<a href="https://codeclimate.com/github/mmdotz/christmaslists"><img src="https://codeclimate.com/github/mmdotz/christmaslists/badges/gpa.svg" /></a>
+
 Welcome to Family Christmas Lists app, the everything present application to
 keep track of gifting at the Holidays.
 
