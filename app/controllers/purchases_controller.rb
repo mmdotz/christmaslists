@@ -5,6 +5,12 @@ class PurchasesController < ApplicationController
   # GET /purchases.json
   def index
     @purchases = current_user.purchases.all
+
+    respond_to do |format|
+      format.html
+      format.csv {send_data@purchases.to_csv}
+    end
+
   end
 
   # GET /purchases/1
