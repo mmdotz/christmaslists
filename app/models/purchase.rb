@@ -3,7 +3,7 @@ class Purchase < ActiveRecord::Base
   has_many :recipients
 
   def self.to_csv
-    attributes = %w()
+    attributes = %w(item url vendor cost tracking_num bought user_id purchase_date recipient_id)
     CSV.generate(headers:true) do |csv|
       csv << attributes
       all.each do |purchase|
