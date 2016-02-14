@@ -1,8 +1,9 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
-<h3>Please select a season to view
-  <%= select_year(Date.today, prompt:"Choose season", id: 'set_year',) %> (options for select from season/year array)
+<h4>Please select a season to view
+  <!-- <%# select_year(Budget.budget_year_choices(current_user), prompt: "Choose season," id: 'set_year') %> -->
+  <%= Budget.budget_year_choices(current_user) %>
 
-  Current budget (<em><%= @current_year %></em>)  is: $ <%= current_user.budgets.last.amount %>  (correct this)
+  Current budget  is: $ <%= Budget.budget(current_user) unless nil %>
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
