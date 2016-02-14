@@ -12,6 +12,16 @@ class Purchase < ActiveRecord::Base
     end
   end
 
+  def total_number_paid(user) #second argument should be budget year
+    user.purchases.where(bought: true).count
+  end
 
+  def total_number_unpaid(user) #second argument should be budget year
+    user.purchases.where(bought: false).count
+  end
 
+  def total_amt_paid(user) #second argument should be budget year
+    user.purchases.where(bought: true).map { |purchase| purchase.cost}.sum
+  end
+  
 end

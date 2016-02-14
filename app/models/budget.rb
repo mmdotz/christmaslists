@@ -7,7 +7,7 @@ class Budget < ActiveRecord::Base
   end
 
   def self.budget(user)
-    user.budgets.last.amount #change this
+    user.budgets.last.amount #change this to current_year
   end
 
 end

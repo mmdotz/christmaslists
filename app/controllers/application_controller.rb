@@ -20,18 +20,6 @@ class ApplicationController < ActionController::Base
     session[:logged_in_users_id].present?
   end
 
-  def total_number_paid(user) #second argument should be budget year
-    user.purchases.where(bought: true).count
-  end
-
-  def total_number_unpaid(user) #second argument should be budget year
-    user.purchases.where(bought: false).count
-  end
-
-  def total_amt_paid(user) #second argument should be budget year
-    user.purchases.where(bought: true).map { |purchase| purchase.cost}.sum
-  end
-
   helper_method :user_logged_in?
   helper_method :current_user
   helper_method :total_number_paid
