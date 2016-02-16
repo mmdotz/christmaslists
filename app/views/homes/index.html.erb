@@ -1,15 +1,15 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
-<h4>Please select a season to view
-  <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user)) %>
-  <!-- <%# Budget.budget_year_choices(current_user) %> -->
+<h4>Please
+  <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), id:'set_year', :prompt => "Select a season") %> to view
 
-  Current budget  is: $ <%= Budget.budget(current_user) unless nil %>
+  <br>
+  The budget for current_year(chosen_year) was/is: $ <%= Budget.budget(current_user) unless nil %>
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
   <br>
   <br>
-  <!-- need to set the current_year then see only those purchases with purchase_date -->
+  <!-- send current_year as second argument -->
   You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
   gift(s) this season. (showing all current_user purchases - filter by season/year)
   <br>

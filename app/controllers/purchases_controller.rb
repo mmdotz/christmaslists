@@ -4,7 +4,7 @@ class PurchasesController < ApplicationController
   # GET /purchases
   # GET /purchases.json
   def index
-    @purchases = current_user.purchases.all
+    @purchases = current_user.purchases.all # would use ever want to see all purchases over all seasons?
 
     respond_to do |format|
       format.html

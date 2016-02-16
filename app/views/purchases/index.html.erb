@@ -18,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <% current_user.purchases.each do |purchase| %>
+      <% @purchases.each do |purchase| %>
         <tr>
           <td><%= purchase.item %></td>
           <td><%= purchase.url %></td>

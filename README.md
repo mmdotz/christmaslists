@@ -19,13 +19,13 @@ Backtype "/users" into URL to see list of users for demo data.
 ##Libraries, software and other tools used
 - Ruby (2.2.1)
 - Rails (4.2.4)
-- Bootstrap for styling and javascript
-- Web hosting by Heroku
+- Bootstrap for styling and javascript - todo
+- Web hosting by Heroku -todo
 - Postgresql Database
-- Sass
+- Sass - todo
 - React for dynamic recipient search - todo
 - Bcrypt for password encryption
-- CSV for exporting data - todo
+- CSV for exporting data
 - Chartkick for graphing - todo
 
 More information in the Gemfile

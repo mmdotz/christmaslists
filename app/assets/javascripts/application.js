@@ -16,12 +16,12 @@
 //= require turbolinks
 //= require_tree .
 
-// not working - this needs to start from options for select year array from purchase_dates in Purchase
 $(document).ready(function() {
   $('#set_year').change(function() {
-    current_year = $(this).val();
+    var current_year = $(this).val();
     $.ajax({
-      url: "/home?current_year=" + current_year
+      url: "/home/set_current_year", //onClick I want to create current_year and show the chosen year in footer
+      data: "year=" + current_year
     });
   });
 });

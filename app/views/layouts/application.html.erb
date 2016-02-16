@@ -28,7 +28,8 @@
 <br>
 <br>
 <% if user_logged_in? %>
-<%= current_user.first %> is logged in
+<%= current_user.first %> is logged into year: <%# current_year unless current_year.nil? %>
+
 <% end %>
 </div>
 </body>
