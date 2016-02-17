@@ -4,9 +4,7 @@ class HomesController < ApplicationController
 
   def set_current_year
     session[:current_year] = params[:year]
-    respond_to do |format|      #reloads page
-      format.js { render inline: "location.reload();" }
-    end
+    render :text => session[:current_year]
   end
 
 end

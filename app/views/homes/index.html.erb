@@ -1,6 +1,6 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
 <h4>Please
-  <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), id:'set_year', :prompt => "Select a season") %> to view
+  <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
 
   <br>
   The budget for current_year(chosen_year) was/is: $ <%= Budget.budget(current_user) unless nil %>
