@@ -3,7 +3,7 @@
   <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
 
   <br>
-  The budget for current_year(chosen_year) was/is: $ <%= Budget.budget(current_user) unless nil %>
+  The budget for <%= current_year %> was/is: $ <%# Budget.budget(current_user) unless nil %>
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>

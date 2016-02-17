@@ -3,10 +3,15 @@ class Budget < ActiveRecord::Base
   validates_presence_of :year
 
   def self.budget_year_choices(user)
-    user.budgets.map { |budget| budget.year.year }
+    user.budgets.map { |budget| budget.formatted_year }
   end
 
-  def self.budget(user)
-    user.budgets.last.amount #change this to current_year
+  def budget(user)
+    #current_user current_year amount
+  end
+
+
+  def formatted_year
+    year.year
   end
 end
