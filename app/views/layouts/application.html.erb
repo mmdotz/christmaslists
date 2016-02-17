@@ -28,7 +28,7 @@
 <br>
 <br>
 <% if user_logged_in? %>
-<%= current_user.first %> is logged into year: <%# current_year unless current_year.nil? %>
+<%= current_user.first %> is logged into year: <%= session[:current_year] unless session[:current_year].nil? %>
 
 <% end %>
 </div>
