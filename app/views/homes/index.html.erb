@@ -3,14 +3,14 @@
   <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
 
   <br>
-  The budget for <%= current_year %> was/is: $ <%# Budget.budget(current_user) unless nil %>
+  The budget for <%= current_year %> was/is: $ <%= Budget.current_year_budget(current_user, current_year) unless nil %>
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
   <br>
   <br>
   <!-- send current_year as second argument -->
-  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
+  You have spent $<%= total_amt_paid(current_user, current_year) %> on <%= total_number_paid(current_user, current_year) %>
   gift(s) this season. (showing all current_user purchases - filter by season/year)
   <br>
   You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:

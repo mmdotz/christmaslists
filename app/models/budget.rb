@@ -6,10 +6,9 @@ class Budget < ActiveRecord::Base
     user.budgets.map { |budget| budget.formatted_year }
   end
 
-  def budget(user)
-    #current_user current_year amount
-  end
-
+  def self.current_year_budget(user, year)
+    user.budgets.where('budget_year_choices LIKE ?', year)   # => match the user's budget years to the current_year
+  end                                                        # budget_year_choices doesn't exist as column, how to compare?
 
   def formatted_year
     year.year
