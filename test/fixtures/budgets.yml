@@ -2,12 +2,10 @@
 
 one:
   year: 2015-12-27
-  amount: 1
-  user: MyString
-  belongs_to: MyString
+  amount: 100
+  user: "Michelle"
 
 two:
-  year: 2015-12-27
-  amount: 1
-  user: MyString
-  belongs_to: MyString
+  year: 2015-12-28
+  amount: 1000
+  user: "Penny"

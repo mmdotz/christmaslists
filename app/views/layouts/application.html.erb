@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Family Christmas lists</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <ul class="nav nav-tabs">
-    <li><a href='/home'>Home</a></li>
-    <li><a href='/purchases'>Purchases</a></li>
-    <li><a href='/recipients'>Recipients</a></li>
-    <li><a href='/relations'>Relations</a></li> <!--for dev purposes only -->
-    <li><a href='/budgets'>Season Budgets</a></li>
-    <li><a href='/clans'>Clans</a></li>
-    <li><a href='/costs'>Costs</a></li>
-    <% if user_logged_in? %>
-    <li><a href='/logout'>Logout</a></li>
-    <% else %>
-    <li><a href='/login'>Login</a></li>
-    <% end %>
-  </ul>
-  <div class="container">
-    <p id="notice"><%= notice %></p>
-
-<%= yield %>
-<br>
-<br>
-<% if user_logged_in? %>
-<%= current_user.first %> is logged into year: <%= session[:current_year] unless session[:current_year].nil? %>
-
-<% end %>
-</div>
-</body>
+  <head>
+    <title>Family Christmas lists</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <ul class="nav nav-tabs">
+      <li><a href='/home'>Home</a></li>
+      <li><a href='/purchases'>Purchases</a></li>
+      <li><a href='/recipients'>Recipients</a></li>
+      <li><a href='/relations'>Relations</a></li> <!--for dev purposes only -->
+      <li><a href='/budgets'>Season Budgets</a></li>
+      <li><a href='/clans'>Clans</a></li>
+      <li><a href='/costs'>Costs</a></li>
+      <% if user_logged_in? %>
+      <li><a href='/logout'>Logout</a></li>
+      <% else %>
+      <li><a href='/login'>Login</a></li>
+      <% end %>
+    </ul>
+  </head>
+  <body>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
+      <br>
+      <br>
+      <% if user_logged_in? %>
+        <%= current_user.first %> is logged into year: <%= session[:current_year] unless session[:current_year].nil? %>
+      <% end %>
+    </div>
+  </body>
 </html>

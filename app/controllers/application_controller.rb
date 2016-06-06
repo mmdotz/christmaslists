@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
 
   def total_number_paid(user) #second argument should be budget year
     user.purchases.where(bought: true).count
+    #purchases where purchase_date.year LIKE?, current_year
   end
 
   def total_number_unpaid(user) #second argument should be budget year
