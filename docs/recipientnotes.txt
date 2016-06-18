@@ -1,7 +1,9 @@
-Who is a Recipient: another User, a non-user
+Who is a Recipient: another User, a non-user, someone for whom a gift is intended
+  if not actually bought
 
 Recipient
 belongs_to :user
+belongs_to :purchase
 
 fields:
 age   :integer

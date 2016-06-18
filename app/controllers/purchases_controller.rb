@@ -1,10 +1,9 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
-  # GET /purchases
-  # GET /purchases.json
   def index
-    @purchases = current_user.purchases.all # would use ever want to see all purchases over all seasons?
+    # filter purchases through current_year_purchases - not working
+    @purchases = current_user.purchases
 
     respond_to do |format|
       format.html
@@ -13,24 +12,18 @@ class PurchasesController < ApplicationController
 
   end
 
-  # GET /purchases/1
-  # GET /purchases/1.json
   def show
   end
 
-  # GET /purchases/new
   def new
     @purchase = Purchase.new
     @recipients = current_user.recipients
   end
 
-  # GET /purchases/1/edit
   def edit
     @recipients = current_user.recipients
   end
 
-  # POST /purchases
-  # POST /purchases.json
   def create
     @purchase = Purchase.new(purchase_params)
     @recipients = current_user.recipients
@@ -46,8 +39,6 @@ class PurchasesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /purchases/1
-  # PATCH/PUT /purchases/1.json
   def update
     respond_to do |format|
       if @purchase.update(purchase_params)
@@ -60,8 +51,6 @@ class PurchasesController < ApplicationController
     end
   end
 
-  # DELETE /purchases/1
-  # DELETE /purchases/1.json
   def destroy
     @purchase.destroy
     respond_to do |format|
@@ -71,13 +60,11 @@ class PurchasesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_purchase
-      @purchase = Purchase.find(params[:id])
-    end
+  def set_purchase
+    @purchase = Purchase.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def purchase_params
-      params.require(:purchase).permit(:item, :url, :vendor, :cost, :tracking_num, :bought, :user_id, :purchase_date, :recipient_id)
-    end
+  def purchase_params
+    params.require(:purchase).permit(:item, :url, :vendor, :cost, :tracking_num, :bought, :user_id, :purchase_date, :recipient_id)
+  end
 end

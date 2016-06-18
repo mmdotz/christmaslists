@@ -5,7 +5,7 @@
 
   <br>
   <!-- Show next line only when budget_year_choices is populated   -->
-  The budget for <%= current_year %> was/is: $ <%= Budget.current_year_budget_amount(current_user, current_year).inspect unless nil %>
+  The budget for <%= current_year %> was/is: $ <%= Budget.current_year_budget_amount(current_user, current_year) unless nil %>
   <br>
   <br>
   To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>

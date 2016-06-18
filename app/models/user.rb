@@ -12,5 +12,10 @@ class User < ActiveRecord::Base
   def full_name
     "#{self.first} #{self.last}"
   end
-  
+
+#not working!
+  def current_year_purchases
+    purchases.where(purchase_date.between?(2014-12-26, 2015-12-24))
+  end
+
 end
