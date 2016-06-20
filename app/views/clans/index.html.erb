@@ -23,9 +23,7 @@
 
           <% end %>
           </td>
-          <td><%= link_to 'Show', clan %></td>
-          <td><%= link_to 'Edit', edit_clan_path(clan) %></td>
-          <td><%= link_to 'Destroy', clan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete Clan', clan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>

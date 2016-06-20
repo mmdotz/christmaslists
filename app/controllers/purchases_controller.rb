@@ -3,7 +3,7 @@ class PurchasesController < ApplicationController
 
   def index
     # filter purchases through current_year_purchases - not working
-    @purchases = current_user.purchases
+    @purchases = current_user.purchases.order(params[:sort])
 
     respond_to do |format|
       format.html

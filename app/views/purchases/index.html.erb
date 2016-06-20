@@ -1,18 +1,19 @@
 
 <h1>Purchases for the ** <%= current_year %> ** Season</h1>
+(currently showing all purchases...Post-Dec24 should appear in next season's purchases)
 
 <table class="table-responsive">
   <table class="table">
     <thead>
       <tr>
-        <th>Item</th>
+        <th><%= link_to 'Item',          :sort => "item" %></th>
         <th>Url</th>
-        <th>Vendor</th>
-        <th>Cost</th>
-        <th>Tracking num</th>
-        <th>Bought?</th>
-        <th>Date of Purchase</th>
-        <th>Recipient</td>
+        <th><%= link_to 'Vendor',          :sort => "vendor" %></th>
+        <th><%= link_to 'Cost',            :sort => "cost" %></th>
+        <th><%= link_to 'Tracking number', :sort => "tracking_num" %></th>
+        <th><%= link_to 'Bought?',         :sort => "bought" %></th>
+        <th><%= link_to 'Purchase Date',   :sort => "purchase_date" %></th>
+        <th><%= link_to 'Recipient(sort broken)',       :sort => "purchase.user" %></td>
         <th colspan="3"></th>
       </tr>
     </thead>
