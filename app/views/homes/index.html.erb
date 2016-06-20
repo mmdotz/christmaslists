@@ -1,4 +1,5 @@
 <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
+<h3> <%= Home.days_until_christmas %> </h3>
 <h4>Please
   <!-- Hide this section once budget_year_choices is populated -->
   <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
@@ -12,7 +13,7 @@
   <br>
   <br>
   <!-- send current_year as second argument -->
-  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
+ Total spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
   gift(s) this season. (showing all current_user purchases - filter by season/year)
   <br>
   You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:

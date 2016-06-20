@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
     session[:current_year]
   end
 
+
+  # move these to ApplicationHelper and use callback in controller
   def total_number_paid(user) #second argument should be budget year
     user.purchases.where(bought: true).count
     #purchases where purchase_date.year LIKE?, current_year

@@ -18,3 +18,8 @@ not all fields should be required so cash gifts can be saved
 ideally this would be tied to Wish List
 want to see recipient.purchases
 ?? do purchases belong_to a season?
+
+Sort purchases by column header see http://railscasts.com/episodes/228-sortable-table-columns?autoplay=true
+sort breaks and doesn't reload when recipient is clicked.
+
+Index page currently showing all purchases...Post-Dec24 should appear in next season's purchases
