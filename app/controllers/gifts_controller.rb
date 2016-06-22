@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
   def index
-    
+    @gifts = current_user.gifts
   end
 
   def show

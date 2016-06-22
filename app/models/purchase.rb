@@ -1,5 +1,7 @@
 class Purchase < ActiveRecord::Base
   belongs_to  :user
+  has_many    :recipients, through: :gifts
+
 
   def self.to_csv
     attributes = %w(item url vendor cost tracking_num bought user_id purchase_date recipient_id)
