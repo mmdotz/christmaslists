@@ -13,7 +13,6 @@
         <th><%= link_to 'Tracking number', :sort => "tracking_num" %></th>
         <th><%= link_to 'Bought?',         :sort => "bought" %></th>
         <th><%= link_to 'Purchase Date',   :sort => "purchase_date" %></th>
-        <th><%= link_to 'Recipient(sort broken)',       :sort => "purchase.user" %></td>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -27,7 +26,6 @@
           <td><%= purchase.tracking_num %></td>
           <td><%= purchase.bought %></td>
           <td><%= purchase.purchase_date.strftime("%B %d, %Y") %></td>
-          <td><%= purchase.user.first %> fix this</td> <!--user first is NAME Joanne, needs to be recipient.first (name)-->
           <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
         </tr>
       <% end %>

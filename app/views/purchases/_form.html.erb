@@ -21,10 +21,6 @@
     <%= f.date_select :purchase_date %>
   </div>
   <div class="field">
-    <%= f.label :recipient %><br>
-    <%= f.collection_select :recipient_id, @recipients, :id, :first, include_blank: true %>
-  </div>
-  <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
   </div>
