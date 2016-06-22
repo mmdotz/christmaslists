@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   def index
+    @unbought_purchases = current_user.purchases.where(bought: false)
   end
 
   def set_current_year

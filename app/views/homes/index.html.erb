@@ -18,9 +18,9 @@
   <br>
   You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:
   <ul>
-    <% current_user.purchases.where(bought: false).each do |unbought_gift| %>
+    <% @unbought_purchases.each do |p| %>
     <br>
-    <li><%= unbought_gift.item %> for <%= unbought_gift.recipient_id %></li> (change this to full_name)
+    <li><%= p.item %> for <%= p.recipient_id %></li> (change this to full_name)
     <% end %>
   </ul>
   <br>
