@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'gifts/index'
+
+  get 'gifts/show'
+
+  get 'gifts/create'
+
+  get 'gifts/update'
+
+  get 'gifts/destroy'
+
   resources :budgets
   resources :relations
   resources :clans
