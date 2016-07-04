@@ -23,9 +23,8 @@
           <td><%= recipient.age %></td>
           <td><%= recipient.size %></td>
           <td><%= recipient.notes %></td>
-          <td><%= link_to 'Show', recipient %></td>
-          <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
-          <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show gifts', recipient %></td>
+          <td><%= link_to 'Edit recipient', edit_recipient_path(recipient) %></td>
         </tr>
       <% end %>
     </tbody>

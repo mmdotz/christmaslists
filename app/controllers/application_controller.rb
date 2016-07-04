@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
     session[:logged_in_users_id].present?
   end
 
+  # current_year can be reset in a single session - change this?
   def current_year
     session[:current_year]
   end

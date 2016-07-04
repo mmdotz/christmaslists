@@ -7,7 +7,7 @@ class Home < ActiveRecord::Base
       days_left = (christmas - date).to_i
       "There are #{days_left} days until Christmas!"
     else
-      "Season's Over. Go Relax."
+      "Season's Over. Go Relax, or start a new budget for next year."
     end
   end
 

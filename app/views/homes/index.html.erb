@@ -1,36 +1,40 @@
-<h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
-<h3> <%= Home.days_until_christmas %> </h3>
-<h4>Please
-  <!-- Hide this section once budget_year_choices is populated -->
-  <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
+<div class="row">
+  <h1>Welcome to the Family Christmas List app, <%= current_user.first %>.</h1>
+  <h3> <%= Home.days_until_christmas %> </h3>
+  <h4>Please
+    <!-- Hide this section once budget_year_choices is populated -->
+    <%= select(:budget, :budget_id, Budget.budget_year_choices(current_user), {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
 
-  <br>
-  <!-- Show next line only when budget_year_choices is populated   -->
-  The budget for <%= current_year %> was/is: $ <%= Budget.current_year_budget_amount(current_user, current_year) unless nil %>
-  <br>
-  <br>
-  To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
-  <br>
-  <br>
-  <!-- send current_year as second argument -->
- Total spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
-  gift(s) this season. (showing all current_user purchases - filter by season/year)
-  <br>
-  You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:
-  <ul>
-    <% @unbought_purchases.each do |p| %>
     <br>
-    <li><%= p.item %> for <%= p.recipient.full_name %></li> 
-    <% end %>
-  </ul>
-  <br>
-  <br>
-  <!--show purchases limited to current_year -->
-  See <%= link_to 'Purchases', purchases_path  %> this season. (filter by season/year)
-  <br>
-  See <%= link_to 'Clans', clans_path %> you belong to.
-</h4>
+    <!-- Show next line only when budget_year_choices is populated   -->
+    The budget for <%= current_year %> was/is: $ <%= Budget.current_year_budget_amount(current_user, current_year) unless nil %>
+    <br>
+    <br>
+    To begin a new season, go to <%= link_to "Enter a budget", new_budget_path %>
+    <br>
+    <br>
+    <!-- send current_year as second argument -->
+  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
+    gift(s) this season. (showing all current_user purchases - filter by season/year)
+    <br>
+
+  You bought
+    You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:
+    <ul>
+      <% @unbought_purchases.each do |p| %>
+      <br>
+      <li><%= p.item %> for <%= p %></li> <!-- if p.recipient.exists? no recip association anymore on purchase -->
+      <% end %>
+    </ul>
+    <br>
+    <br>
+    <!--show purchases limited to current_year -->
+    See <%= link_to 'Purchases', purchases_path  %> this season. (filter by season/year)
+    <br>
+    See <%= link_to 'Clans', clans_path %> you belong to.
+  </h4>
 
 
-<br>
-<!-- stats here? -->
+  <br>
+  <!-- stats here? -->
+</div>  

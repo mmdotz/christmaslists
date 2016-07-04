@@ -1,4 +1,4 @@
-
+<h3> recipient show page all purchases assigned to recipient? </h3>
 <p>
   <strong>Age:</strong>
   <%= @recipient.age %>
@@ -15,19 +15,19 @@
 </p>
 
 <p>
-  <strong>First:</strong>
-  <%= @recipient.first %>
+  <strong>Name:</strong>
+  <%= @recipient.full_name %>
 </p>
 
 <p>
-  <strong>Last:</strong>
-  <%= @recipient.last %>
+  <strong>Already bought:</strong>
 </p>
-
 <p>
-  <strong>User:</strong>
-  <%= @recipient.user.first %>
+  <!--these should be where bought : true)-->
+<% @recipient.purchases.each do |purchased_gift| %>
+  <%= purchased_gift.item %>
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
-<%= link_to 'Back', recipients_path %>
+<%= link_to 'Edit recipient info', edit_recipient_path(@recipient) %> |
+<%= link_to 'Back to List', recipients_path %>
