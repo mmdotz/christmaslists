@@ -3,6 +3,8 @@ class Purchase < ActiveRecord::Base
   has_many    :gifts
   has_many    :recipients, through: :gifts
 
+  scope :paid, -> { where(bought: true) }
+  scope :unpaid, -> { where(bought: false) }
 
   def self.to_csv
     attributes = %w(item url vendor cost tracking_num bought user_id purchase_date recipient_id)
