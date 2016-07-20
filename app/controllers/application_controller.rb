@@ -25,26 +25,8 @@ class ApplicationController < ActionController::Base
     session[:current_year]
   end
 
-
-  # move these to ApplicationHelper and use callback in controller
-  def total_number_paid(user) #second argument should be budget year
-    user.purchases.paid.count
-    #purchases where purchase_date.year LIKE?, current_year
-  end
-
-  def total_number_unpaid(user) #second argument should be budget year
-    user.purchases.unpaid.count
-  end
-
-  def total_amt_paid(user) #second argument should be budget year
-    user.purchases.paid.map { |purchase| purchase.cost}.sum
-  end
-
   helper_method :user_logged_in?
   helper_method :current_user
   helper_method :current_year
-  helper_method :total_number_paid
-  helper_method :total_number_unpaid
-  helper_method :total_amt_paid
 
 end
