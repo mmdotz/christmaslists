@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
 
   # current_year can be reset in a single session - change this?
   def current_year
-    session[:current_year]
+    @current_year
   end
 
   helper_method :user_logged_in?

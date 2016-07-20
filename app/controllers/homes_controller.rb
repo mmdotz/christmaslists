@@ -5,7 +5,7 @@ class HomesController < ApplicationController
 
 # reload page after year/season is chosen
   def set_current_year
-    session[:current_year] = params[:year]
+    @current_year = params[:year]
     respond_to do |format|
        format.js { render inline: "location.reload();" }
      end
