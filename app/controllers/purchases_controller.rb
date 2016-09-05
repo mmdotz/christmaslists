@@ -14,7 +14,6 @@ class PurchasesController < ApplicationController
 
   def new
     @purchase = Purchase.new
-    @recipients = current_user.recipients
   end
 
   def edit
@@ -23,7 +22,6 @@ class PurchasesController < ApplicationController
 
   def create
     @purchase = Purchase.new(purchase_params)
-    @recipients = current_user.recipients
 
     respond_to do |format|
       if @purchase.save

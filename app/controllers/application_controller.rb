@@ -29,7 +29,12 @@ class ApplicationController < ActionController::Base
     current_user.purchases.where(purchase_date: DateTime.new(current_year - 1, 12, 25)...DateTime.new(current_year, 12, 24))
   end
 
+  def recipients
+    current_user.recipients.order(:name)
+  end
+
   helper_method :user_logged_in?
   helper_method :current_year
   helper_method :purchases
+  helper_method :recipients
 end

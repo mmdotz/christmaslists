@@ -17,9 +17,17 @@
     <%= f.text_field :item %>
   </div>
   <div class="field">
+    <%= f.label :budget_year %><br>
+    <%= f.date_select :budget_year_choices %>
+  </div>
+  <div class="field">
     <%= f.label :purchase_date %><br>
     <%= f.date_select :purchase_date %>
   </div>
+  <!-- <div class="field"> Purchases only have recipient association once they are gifted...this schema sucks
+    <%# f.label :recipient %><br>
+    <%# f.collection_select :recipient_id, recipients, :id, :name, include_blank: true %>
+  </div> -->
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
