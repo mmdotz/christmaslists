@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
   include PurchasesHelper
+  include BudgetsHelper
 
   def index
     respond_to do |format|
@@ -21,6 +22,7 @@ class PurchasesController < ApplicationController
   end
 
   def create
+    budget_year_choices
     @purchase = Purchase.new(purchase_params)
 
     respond_to do |format|

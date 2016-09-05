@@ -16,13 +16,14 @@
     <%= f.label :item %><br>
     <%= f.text_field :item %>
   </div>
-  <div class="field">
-    <%= f.label :budget_year %><br>
-    <%= f.date_select :budget_year_choices %>
-  </div>
+  <!-- Drop budget_year_choices down in form to set the year in purchase date. Doesn't exist -> enter new budget... -->
+  <!-- <div class="field">
+    <%# f.label :budget_year %><br>
+    <%# f.date_select :budget_year_choices %>
+  </div> -->
   <div class="field">
     <%= f.label :purchase_date %><br>
-    <%= f.date_select :purchase_date %>
+    <%= f.date_select :purchase_date %> <!-- how to create select for only date and day? -->
   </div>
   <!-- <div class="field"> Purchases only have recipient association once they are gifted...this schema sucks
     <%# f.label :recipient %><br>
