@@ -10,5 +10,4 @@ class Home < ActiveRecord::Base
       "Season's Over. Go Relax, or start a new budget for next year."
     end
   end
-
 end

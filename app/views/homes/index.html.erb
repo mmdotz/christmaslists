@@ -14,8 +14,8 @@
     <br>
     <br>
     <!-- send current_year as second argument -->
-  You have spent $<%= total_amt_paid(current_user) %> on <%= total_number_paid(current_user) %>
-    gift(s) this season. (showing all current_user purchases - filter by season/year)
+  You have spent $<%= total_amt_paid %> on <%= total_number_paid %>
+    gift(s) this season.
     <br>
     <br>
 
@@ -26,7 +26,7 @@
       <li>list item2</li>
     </ul>
 
-    You have <%= total_number_unpaid(current_user) %> gift(s) on this season's list you haven't bought yet:
+    You have <%= total_number_unpaid %> gift(s) on this season's list you haven't bought yet:
     <ul>
       <% @unbought_purchases.each do |p| %>
       <br>
@@ -35,8 +35,7 @@
     </ul>
     <br>
     <br>
-    <!--show purchases limited to current_year -->
-    See <%= link_to 'Purchases', purchases_path  %> this season. (filter by season/year)
+    See <%= link_to 'Purchases', purchases_path  %> this season. 
     <br>
     See <%= link_to 'Clans', clans_path %> you belong to.
   </h4>

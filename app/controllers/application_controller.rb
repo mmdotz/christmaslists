@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+
   protect_from_forgery with: :exception
   before_action :authenticate_user
 
@@ -20,13 +19,17 @@ class ApplicationController < ActionController::Base
     session[:logged_in_users_id].present?
   end
 
-  # current_year can be reset in a single session - change this?
   def current_year
-    @current_year
+    session[:current_year].to_i
+  end
+
+  helper_method :current_user
+
+  def purchases
+    current_user.purchases.where(purchase_date: DateTime.new(current_year - 1, 12, 25)...DateTime.new(current_year, 12, 24))
   end
 
   helper_method :user_logged_in?
-  helper_method :current_user
   helper_method :current_year
-
+  helper_method :purchases
 end

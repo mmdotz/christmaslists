@@ -1,6 +1,5 @@
 
 <h1>Purchases for the ** <%= current_year %> ** Season</h1>
-(currently showing all purchases...Post-Dec24 should appear in next season's purchases)
 
 <table class="table-responsive">
   <table class="table">
@@ -17,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @purchases.each do |purchase| %>
+      <% purchases.each do |purchase| %>
         <tr>
           <td><%= purchase.item %></td>
           <td><%= purchase.url %></td>

@@ -1,15 +1,12 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
+  include PurchasesHelper
 
   def index
-    # filter purchases through current_year_purchases - not working
-    @purchases = current_user.purchases.order(params[:sort])
-
     respond_to do |format|
       format.html
-      format.csv {send_data @purchases.to_csv}
+      format.csv {send_data purchases.to_csv}
     end
-
   end
 
   def show
