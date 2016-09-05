@@ -5,13 +5,16 @@ module PurchasesHelper
     #purchases where purchase_date are between range NOT compared to current_year
   end
 
-
   def total_number_unpaid(user) #second argument should be budget year
     user.purchases.unpaid.count
   end
 
   def total_amt_paid(user) #second argument should be budget year
     user.purchases.paid.pluck(:cost).sum
+  end
+
+  def season(year)
+    where(purchase_date: DateTime.new(year - 1, 12, 25)...DateTime.new(year, 12, 24))
   end
 end
 
