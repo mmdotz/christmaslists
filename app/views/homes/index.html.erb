@@ -5,6 +5,7 @@
     <!-- Hide this section once current_year is set, and add button to "go to a new season"-->
     <%= select(:budget, :budget_id, budget_year_choices, {:prompt => "Select a season"}, {id:'set_year'} ) %> to view
 ## currently able to add new purchase before creating a budget for that year - fix ##
+
     <br>
     <!-- Show next line only when budget_year_choices is populated   -->
     The budget for <%= current_year %> was/is: $ <%= Budget.current_year_budget_amount(current_user, current_year) unless nil %>

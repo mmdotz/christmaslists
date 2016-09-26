@@ -10,4 +10,12 @@ class Home < ActiveRecord::Base
       "Season's Over. Go Relax, or start a new budget for next year."
     end
   end
+
+# reload page after year/season is chosen
+  def set_current_year
+    session[:current_year] = params[:year]
+    respond_to do |format|
+      format.js { render inline: "location.reload();" }
+    end
+  end
 end

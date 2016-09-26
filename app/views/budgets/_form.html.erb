@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.label :year %><br>
-    <%= f.date_select :year %><!--only show year here -->
+    <%= f.date_select :year, discard_month: true, discard_day: true %><!--only show year here -->
   </div>
   <div class="field">
     <%= f.label :amount %><br>

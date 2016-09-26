@@ -23,8 +23,6 @@ class ApplicationController < ActionController::Base
     session[:current_year].to_i
   end
 
-  helper_method :current_user
-
   def purchases
     current_user.purchases.where(purchase_date: DateTime.new(current_year - 1, 12, 25)...DateTime.new(current_year, 12, 24))
   end
@@ -33,6 +31,8 @@ class ApplicationController < ActionController::Base
     current_user.recipients.order(:name)
   end
 
+
+  helper_method :current_user
   helper_method :user_logged_in?
   helper_method :current_year
   helper_method :purchases
