@@ -14,7 +14,7 @@
     <tbody>
       <% @budgets.each do |budget| %>
         <tr>
-          <td><%= budget.year %></td>
+          <td><%= budget.formatted_year %></td>
           <td><%= budget.amount %></td>
           <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
         </tr>

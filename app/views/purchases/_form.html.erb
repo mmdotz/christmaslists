@@ -14,7 +14,7 @@
   <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.label :item %><br>
-    <%= f.text_field :item %>
+    <%= f.text_field :item, :size => "150" %>
   </div>
   <!-- Drop budget_year_choices down in form to set the year in purchase date. Doesn't exist -> enter new budget... -->
   <!-- <div class="field">
@@ -23,14 +23,14 @@
   </div> -->
   <div class="field">
     <%= f.label :purchase_date %><br>
-    <%= f.date_select :purchase_date %> <!-- how to create select for only date and day? -->
+    <%= f.date_select :purchase_date %>
   </div>
   <!-- <div class="field"> Purchases only have recipient association once they are gifted...this schema sucks
     <%# f.label :recipient %><br>
     <%# f.collection_select :recipient_id, recipients, :id, :name, include_blank: true %>
   </div> -->
   <div class="field">
-    <%= f.label :url %><br>
+    <%= f.label :Website %><br>
     <%= f.text_field :url %>
   </div>
   <div class="field">
@@ -39,14 +39,14 @@
   </div>
   <div class="field">
     <%= f.label :cost %><br>
-    <%= f.number_field :cost %>
+    <%= f.number_field :cost, min: ".01" %>
   </div>
   <div class="field">
-    <%= f.label :tracking_num %><br>
+    <%= f.label :tracking_number %><br>
     <%= f.text_field :tracking_num %>
   </div>
   <div class="field">
-    <%= f.label :bought %><br>
+    <%= f.label :bought? %><br>
     <%= f.check_box :bought %>
   </div>
   <div class="actions">

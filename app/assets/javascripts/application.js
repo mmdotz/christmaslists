@@ -16,13 +16,11 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-  $('#set_year').change(function() {
-    var current_year = $(this).val();
-    $.ajax({
-      url: "/home/set_current_year?year=" + current_year //onClick I want to create current_year and show the chosen year in footer
-    }).done(function( data ){
-      console.log( data );
-    });
+$('#set_year').change(function() {
+  var current_year = $(this).val();
+  $.ajax({
+    url: "/home/set_current_year?year=" + current_year //onClick I want to create current_year and show the chosen year in footer
+  }).done(function( data ){
+    console.log( data );
   });
 });

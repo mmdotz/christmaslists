@@ -22,7 +22,7 @@ class PurchasesController < ApplicationController
   end
 
   def create
-    budget_year_choices
+    # budget_year_choices
     @purchase = Purchase.new(purchase_params)
 
     respond_to do |format|
